@@ -3,7 +3,6 @@
 #
 
 set -o vi
-
 [[ $- != *i* ]] && return
 
 colors() {
@@ -81,6 +80,7 @@ if ${use_color} ; then
 	alias grep='grep --colour=auto'
 	alias egrep='egrep --colour=auto'
 	alias fgrep='fgrep --colour=auto'
+    alias c='clear'
 else
 	if [[ ${EUID} == 0 ]] ; then
 		# show root@ when we don't have colors
